@@ -1,0 +1,13 @@
+{
+    "builds": [{
+        "src": "cyber_security_alert/wsgi.py",
+        "use": "@ardnt/vercel-python-wsgi",
+        "config": { "maxLambdaSize": "15mb" }
+    }],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "cyber_security_alert/wsgi.py"
+        }
+    ]
+}
